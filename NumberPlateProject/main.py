@@ -1,5 +1,4 @@
 # VEHICLE NUMBER PLATE DETECTION
-# Just run this file in VS Code after installing dependencies.
 
 import cv2
 import numpy as np
@@ -68,8 +67,6 @@ cropped_image = gray[topx:bottomx, topy:bottomy]
 cv2.imwrite("detected_plate.jpg", cropped_image)
 
 # -----------------------------
-# STEP 5: Preprocess for OCR
-# -----------------------------
 # Adaptive threshold for clarity
 cropped_image = cv2.adaptiveThreshold(
     cropped_image, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
@@ -129,3 +126,4 @@ plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
 plt.title(f"Plate: {clean_text} | State: {state_name}")
 plt.axis('off')
 plt.show()
+
